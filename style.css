@@ -1,0 +1,299 @@
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255,255,255,0.5);
+    --text-light: #eaeaea;
+
+
+    --bg-primary: #141e4c;
+
+    --fw-large: 600;
+    --fw-medium: 300;
+    --fw-small: 200;
+
+    --fs-xxl: 1.5rem;
+    --fs-xl: 1.2rem;
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: var(--text-primary);
+    margin: 0px;
+    padding: 0px;
+}
+
+div{
+    display: block;
+}
+
+body{
+    height: 100%;
+    margin: 12px;
+    padding: 0px;
+    background: linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%);
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-large) 0px;
+}
+
+
+.search{
+    position: relative;
+    width: 700px;
+    height: 50px;
+}
+
+input[type="text"]{
+    background-color:rgba(255,255,255,0.3);
+    border-radius: 50px;
+    border: 0px;
+    padding: 20px;
+    width: 700px;
+    height: 50px;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: var(--text-primary)
+}
+
+.search-btn{
+    position: absolute;
+    background-color:rgba(255,255,255,0.3);
+    border: 0px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    right: 10px;
+}
+
+.save-location-btn, .clear-location-btn, .clear-saved-location-btn{
+    background-color:rgba(255,255,255,0.3);
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.search-btn img, .save-location-btn img, .clear-location-btn img, .clear-saved-location-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.container-saved-locations{
+    display: none;
+    justify-content: center;
+    margin: var(--spacing-small) 0px;
+}
+
+.container-saved-locations button:not(.clear-saved-location-btn){
+    background-color:rgba(255,255,255,0.3);
+    border: 0px;
+    border-radius: 50px;
+    width: 105px;
+    height: 40px;
+    margin-right: var(--spacing-small);
+}
+
+.save-location-btn:hover, .clear-location-btn:hover, .clear-saved-location-btn:hover, .search-btn:hover, .container-saved-locations button:hover{
+    background-color:rgba(255,255,255,0.6);
+}
+
+.search-bar, .location-name, .container-saved-locations, .next-hours, .next-days, .container-hours, .day-card, .container-current-details, .container-current-temperature{
+    width: 100%;
+}
+
+.location-name{
+    font-size: var(--fs-xxl);
+    text-align: center;
+}
+
+.container-current-temperature{
+    display: flex;
+    margin-top: var(--spacing-tiny);
+}
+
+.container-icon{
+    flex-grow: 1.25;
+    text-align: center;
+}
+
+/*----de sterst----*/
+img{
+    width: 54px;
+    height: 54px;
+}
+
+.container-icon img{
+    width: 160px;
+    height: 160px;
+}
+
+.container-degrees{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.container-degrees h2{
+    font-size: 5.5rem;
+    font-weight: var(--fw-medium);
+    text-align: center;
+}
+
+.container-degrees p{
+    font-size: var(--fs-xl);
+    text-align: center;
+}
+
+.container-current-details{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--text-secondary);
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: var(--spacing-medium);
+    text-align: center;
+}
+
+
+.details-degree-high, .details-degree-low, .details-wind-speed, .details-humidity-level, .details-sunrise-time, .details-sunset-time{
+    margin-top: var(--spacing-medium);
+    font-size: var(--fs-xxl);
+}
+
+.details-high, .details-low, .details-wind, .details-humidity, .details-sunrise, .details-sunset{
+    color: var(--text-secondary);
+}
+
+.next-hours{
+    display: none;
+}
+
+.next-hours h2, .next-days h2{
+    font-weight: var(--fw-small);
+    margin: var(--spacing-medium) 0px;
+}
+
+.container-hours{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hour-card{
+    width: 13%;
+    padding: var(--spacing-small) 0px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.hour-card h3, .hour-card p{
+    margin-bottom: var(--spacing-small);
+    font-weight: var(--fw-large);
+    font-size: var(--fs-large);
+}
+
+.next-days{
+    margin-top: var(--spacing-medium);
+}
+
+.container-days{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: var(--spacing-small);
+    padding: var(--spacing-medium) 0px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.15);
+    font-size: var(--fs-large);
+    text-align: center;
+}
+
+.date-temparature-day, .icon-day, .low-temperature-day, .high-temperature-day, .wind-day, .humidity-day{
+    width: 33.33333%;
+}
+
+.day-card h3, .day-card p{
+    font-weight: var(--fw-large);
+    font-size: var(--fs-large);
+}
+
+.day-card p{
+    color: var(--text-secondary);
+}
+
+
+@media only screen and (min-width: 920px){
+
+    main{
+        width: 880px;
+        margin: 8px auto;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+   
+    body{
+        margin: 20px;
+    }
+
+    .container-current-details{
+        margin-bottom: 1em;
+        padding-bottom: 0;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid rgba(255,255,255,0.5);
+        width: 50%;
+    }
+
+    .container-current-temperature{
+        width: 50%;
+    }
+
+    .next-hours{
+        display: block;
+    }
+
+}
+
+
+@media only screen and (min-width: 450px){
+
+    .date-temparature-day, .icon-day, .low-temperature-day, .high-temperature-day, .wind-day, .humidity-day{
+        width: 16.666666%;
+        margin-bottom: initial;
+    }
+
+    .container-current-details{
+       margin-top: var(--spacing-medium);
+    }
+}

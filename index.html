@@ -12,10 +12,19 @@
 <main>
 
     <div class="search-bar">
-        <input type="text" id="city-input">
-        <button id="search">search</button>
-        <button id="save-location">save location</button>
-        <button id="clear-location">clear location input</button>
+        <div class="search">
+            <input type="text" id="city-input"  placeholder="Search for a city">
+            <button type="submit" class="search-btn"><img src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt=""></button>
+        </div>
+        <button class="save-location-btn"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png" alt=""></button>
+        <button class="clear-location-btn"><img src="https://cdn-icons-png.flaticon.com/512/3667/3667999.png" alt=""></button>
+    </div>
+
+    <div class="container-saved-locations">
+        <button class="saved-btn"></button>
+        <button class="saved-btn"></button>
+        <button class="saved-btn"></button>
+        <button class="clear-saved-location-btn"><img src="https://cdn-icons-png.flaticon.com/512/7078/7078826.png" alt=""></button>
     </div>
 
     <div class="location-name">
@@ -25,7 +34,7 @@
 
     <div class="container-current-temperature">
         <div class="container-icon">
-            <img src="" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/2659/2659295.png" alt="">
         </div>
         <div class="container-degrees">
             <h2>28&deg;</h2>
@@ -33,7 +42,7 @@
         </div>
     </div>
 
-    <div class="container-curent-details">
+    <div class="container-current-details">
         <div class="container-low-high">
             <p class="details-degree-high">20&deg;</p>
             <p class="details-high">High</p>
@@ -59,23 +68,33 @@
         <div class="container-hours">
             <div class="hour-card">
                 <h3 class="hour">3:00</h3>
-                <img src="" alt="">
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 <p class="temperature-hour">10&deg;</p>
             </div>
             <div class="hour-card">
                 <h3 class="hour">6:00</h3>
-                <img src="" alt="">
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 <p class="temperature-hour">15&deg;</p>
             </div>
             <div class="hour-card">
                 <h3 class="hour">9:00</h3>
-                <img src="" alt="">
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 <p class="temperature-hour">20&deg;</p>
             </div>
             <div class="hour-card">
                 <h3 class="hour">12:00</h3>
-                <img src="" alt="">
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 <p class="temperature-hour">25&deg;</p>
+            </div>
+            <div class="hour-card">
+                <h3 class="hour">15:00</h3>
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                <p class="temperature-hour">30&deg;</p>
+            </div>
+            <div class="hour-card">
+                <h3 class="hour">18:00</h3>
+                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                <p class="temperature-hour">35&deg;</p>
             </div>
         </div>
     </div>
@@ -89,7 +108,7 @@
                     <p class="temperature">5&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="" alt="">
+                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 </div>
                 <div class="low-temperature-day">
                     <h3 class="low-day-degree">6&deg;</h3>
@@ -114,7 +133,7 @@
                     <p class="temperature">5&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="" alt="">
+                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 </div>
                 <div class="low-temperature-day">
                     <h3 class="low-day-degree">6&deg;</h3>
@@ -139,7 +158,7 @@
                     <p class="temperature">5&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="" alt="">
+                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 </div>
                 <div class="low-temperature-day">
                     <h3 class="low-day-degree">6&deg;</h3>
@@ -164,32 +183,7 @@
                     <p class="temperature">5&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="" alt="">
-                </div>
-                <div class="low-temperature-day">
-                    <h3 class="low-day-degree">6&deg;</h3>
-                    <p class="low">Low</p>
-                </div>
-                <div class="high-temperature-day">
-                    <h3 class="high-day-degree">7&deg;</h3>
-                    <p class="hight">High</p>
-                </div>
-                <div class="wind-day">
-                    <h3 class="speed">10mph</h3>
-                    <p class="wind">Wind</p>
-                </div>
-                <div class="humidity-day">
-                    <h3 class="level">30%</h3>
-                    <p class="humidity">Humidity</p>
-                </div>
-            </div>
-            <div class="day-card">
-                <div class="date-temparature-day">
-                    <h3 class="day">Tuesday</h3>
-                    <p class="temperature">5&deg;</p>
-                </div>
-                <div class="icon-day">
-                    <img src="" alt="">
+                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
                 </div>
                 <div class="low-temperature-day">
                     <h3 class="low-day-degree">6&deg;</h3>
@@ -213,6 +207,6 @@
 
 </main>
 
-<script src="main"></script>
+<script src="main.js"></script>
 </body>
 </html>
