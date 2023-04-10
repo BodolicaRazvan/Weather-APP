@@ -7,58 +7,59 @@
     <link rel="stylesheet" href="style.css">
     <title>Weather-app</title>
 </head>
-<body>
+<body id="bd">
 
 <main>
 
     <div class="search-bar">
         <div class="search">
             <input type="text" id="city-input"  placeholder="Search for a city">
-            <button type="submit" class="search-btn"><img src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt=""></button>
+            <button type="button" title="searchc ity" class="search-btn" id="search-button" onclick="getApi()"><img src="/images/search.png" alt=""></button>
         </div>
-        <button class="save-location-btn"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png" alt=""></button>
-        <button class="clear-location-btn"><img src="https://cdn-icons-png.flaticon.com/512/3667/3667999.png" alt=""></button>
+        <button type="button" title="add to favorite" class="save-location-btn" id="save-button" onclick="saveLocation()"><img src="images/image-gallery.png" alt=""></button>
+        <button type="button" title="clear input" class="clear-location-btn" id="clear-location-button" onclick="clearInput()"><img src="images/clear.png" alt=""></button>
+        <button type="button" class="clear-saved-location-btn" id="clear-saved-location-button" onclick="clearSavedLocation()" title="clear saved location"><img src="images/bin.png" alt=""></button>
     </div>
 
     <div class="container-saved-locations">
-        <button class="saved-btn"></button>
-        <button class="saved-btn"></button>
-        <button class="saved-btn"></button>
-        <button class="clear-saved-location-btn"><img src="https://cdn-icons-png.flaticon.com/512/7078/7078826.png" alt=""></button>
+        <button type="button" class="saved-btn" id="saved-location1" onclick="getId(this.id);getLocation();"></button>
+        <button type="button" class="saved-btn" id="saved-location2" onclick="getId(this.id);getLocation();"></button>
+        <button type="button" class="saved-btn" id="saved-location3" onclick="getId(this.id);getLocation();"></button>
+        
     </div>
 
     <div class="location-name">
-        <h1>Bacau</h1>
+        <h1 id="city-name">Bacau</h1>
         <p>Today</p>
     </div>
 
     <div class="container-current-temperature">
         <div class="container-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/2659/2659295.png" alt="">
+            <img src="images/cloud.png" alt="" id="img-day1">
         </div>
         <div class="container-degrees">
-            <h2>28&deg;</h2>
-            <p>Clear</p>
+            <h2 id="temperature-day1">28&deg;</h2>
+            <p id="description-day1">Clear</p>
         </div>
     </div>
 
     <div class="container-current-details">
         <div class="container-low-high">
-            <p class="details-degree-high">20&deg;</p>
+            <p class="details-degree-high" id="degree-high-day1">20&deg;</p>
             <p class="details-high">High</p>
-            <p class="details-degree-low">10&deg;</p>
+            <p class="details-degree-low" id="degree-low-day1">10&deg;</p>
             <p class="details-low">Low</p>
         </div>
         <div class="container-wind-rain">
-            <p class="details-wind-speed">5mph</p>
+            <p class="details-wind-speed" id="wind-day1">5mph</p>
             <p class="details-wind">Wind</p>
-            <p class="details-humidity-level">0%</p>
+            <p class="details-humidity-level" id="humidity-day1">0%</p>
             <p class="details-humidity">Humidity</p>
         </div>
         <div class="container-sunrise-sunset">
-            <p class="details-sunrise-time">05:00</p>
+            <p class="details-sunrise-time" id="sunrise-day1">05:00</p>
             <p class="details-sunrise">Sunrise</p>
-            <p class="details-sunset-time">19:30</p>
+            <p class="details-sunset-time" id="sunset-day1">19:30</p>
             <p class="details-sunset">Sunset</p>
         </div>
     </div>
@@ -67,34 +68,34 @@
         <h2>Weather for the next few hours</h2>
         <div class="container-hours">
             <div class="hour-card">
-                <h3 class="hour">3:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">10&deg;</p>
+                <h3 class="hour" id="hour2">3:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour1">
+                <p class="temperature-hour" id="temperature-hour1">10&deg;</p>
             </div>
             <div class="hour-card">
-                <h3 class="hour">6:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">15&deg;</p>
+                <h3 class="hour" id="hour3">6:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour2">
+                <p class="temperature-hour" id="temperature-hour2">15&deg;</p>
             </div>
             <div class="hour-card">
-                <h3 class="hour">9:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">20&deg;</p>
+                <h3 class="hour" id="hour4">9:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour3">
+                <p class="temperature-hour" id="temperature-hour3">20&deg;</p>
             </div>
             <div class="hour-card">
-                <h3 class="hour">12:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">25&deg;</p>
+                <h3 class="hour" id="hour5">12:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour4">
+                <p class="temperature-hour" id="temperature-hour4">25&deg;</p>
             </div>
             <div class="hour-card">
-                <h3 class="hour">15:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">30&deg;</p>
+                <h3 class="hour" id="hour6">15:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour5">
+                <p class="temperature-hour" id="temperature-hour5">30&deg;</p>
             </div>
             <div class="hour-card">
-                <h3 class="hour">18:00</h3>
-                <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
-                <p class="temperature-hour">35&deg;</p>
+                <h3 class="hour" id="hour7">18:00</h3>
+                <img src="images/sunny.png" alt="" id="image-hour6">
+                <p class="temperature-hour" id="temperature-hour6">35&deg;</p>
             </div>
         </div>
     </div>
@@ -104,101 +105,101 @@
         <div class="container-days">
             <div class="day-card">
                 <div class="date-temparature-day">
-                    <h3 class="day">Tuesday</h3>
-                    <p class="temperature">5&deg;</p>
+                    <h3 class="day" id="day2">Tuesday</h3>
+                    <p class="temperature" id="temperature-day2">15&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                    <img src="images/snowflake.png" alt="" id="iday2">
                 </div>
                 <div class="low-temperature-day">
-                    <h3 class="low-day-degree">6&deg;</h3>
+                    <h3 class="low-day-degree" id="lowd2">6&deg;</h3>
                     <p class="low">Low</p>
                 </div>
                 <div class="high-temperature-day">
-                    <h3 class="high-day-degree">7&deg;</h3>
+                    <h3 class="high-day-degree" id="highd2">16&deg;</h3>
                     <p class="hight">High</p>
                 </div>
                 <div class="wind-day">
-                    <h3 class="speed">10mph</h3>
+                    <h3 class="speed" id="wind-day2">9mph</h3>
                     <p class="wind">Wind</p>
                 </div>
                 <div class="humidity-day">
-                    <h3 class="level">30%</h3>
+                    <h3 class="level" id="humidity-day2">32%</h3>
                     <p class="humidity">Humidity</p>
                 </div>
             </div>
             <div class="day-card">
                 <div class="date-temparature-day">
-                    <h3 class="day">Tuesday</h3>
-                    <p class="temperature">5&deg;</p>
+                    <h3 class="day" id="day3">Tuesday</h3>
+                    <p class="temperature" id="temperature-day3">16&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                    <img src="images/snowflake.png" alt="" id="iday3">
                 </div>
                 <div class="low-temperature-day">
-                    <h3 class="low-day-degree">6&deg;</h3>
+                    <h3 class="low-day-degree" id="lowd3">5&deg;</h3>
                     <p class="low">Low</p>
                 </div>
                 <div class="high-temperature-day">
-                    <h3 class="high-day-degree">7&deg;</h3>
+                    <h3 class="high-day-degree" id="highd3">17&deg;</h3>
                     <p class="hight">High</p>
                 </div>
                 <div class="wind-day">
-                    <h3 class="speed">10mph</h3>
+                    <h3 class="speed" id="wind-day3">5mph</h3>
                     <p class="wind">Wind</p>
                 </div>
                 <div class="humidity-day">
-                    <h3 class="level">30%</h3>
+                    <h3 class="level" id="humidity-day3">10%</h3>
                     <p class="humidity">Humidity</p>
                 </div>
             </div>
             <div class="day-card">
                 <div class="date-temparature-day">
-                    <h3 class="day">Tuesday</h3>
-                    <p class="temperature">5&deg;</p>
+                    <h3 class="day" id="day4">Tuesday</h3>
+                    <p class="temperature" id="temperature-day4">17&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                    <img src="images/snowflake.png" alt="" id="iday4">
                 </div>
                 <div class="low-temperature-day">
-                    <h3 class="low-day-degree">6&deg;</h3>
+                    <h3 class="low-day-degree" id="lowd4">7&deg;</h3>
                     <p class="low">Low</p>
                 </div>
                 <div class="high-temperature-day">
-                    <h3 class="high-day-degree">7&deg;</h3>
+                    <h3 class="high-day-degree" id="highd4">17&deg;</h3>
                     <p class="hight">High</p>
                 </div>
                 <div class="wind-day">
-                    <h3 class="speed">10mph</h3>
+                    <h3 class="speed" id="wind-day4">3mph</h3>
                     <p class="wind">Wind</p>
                 </div>
                 <div class="humidity-day">
-                    <h3 class="level">30%</h3>
+                    <h3 class="level" id="humidity-day4">40%</h3>
                     <p class="humidity">Humidity</p>
                 </div>
             </div>
             <div class="day-card">
                 <div class="date-temparature-day">
-                    <h3 class="day">Tuesday</h3>
-                    <p class="temperature">5&deg;</p>
+                    <h3 class="day" id="day5">Tuesday</h3>
+                    <p class="temperature" id="temperature-day5">18&deg;</p>
                 </div>
                 <div class="icon-day">
-                    <img src="https://ak.picdn.net/shutterstock/videos/28831216/thumb/1.jpg" alt="">
+                    <img src="images/snowflake.png" alt="" id="iday5">
                 </div>
                 <div class="low-temperature-day">
-                    <h3 class="low-day-degree">6&deg;</h3>
+                    <h3 class="low-day-degree" id="lowd5">10&deg;</h3>
                     <p class="low">Low</p>
                 </div>
                 <div class="high-temperature-day">
-                    <h3 class="high-day-degree">7&deg;</h3>
-                    <p class="hight">High</p>
+                    <h3 class="high-day-degree" id="highd5">20&deg;</h3>
+                    <p class="high">High</p>
                 </div>
                 <div class="wind-day">
-                    <h3 class="speed">10mph</h3>
+                    <h3 class="speed" id="wind-day5">2mph</h3>
                     <p class="wind">Wind</p>
                 </div>
                 <div class="humidity-day">
-                    <h3 class="level">30%</h3>
+                    <h3 class="level" id="humidity-day5">15%</h3>
                     <p class="humidity">Humidity</p>
                 </div>
             </div>
