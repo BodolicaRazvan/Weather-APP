@@ -27,10 +27,6 @@
     padding: 0px;
 }
 
-div{
-    display: block;
-}
-
 body{
     height: 100%;
     margin: 12px;
@@ -40,7 +36,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 main{
     display: flex;
@@ -53,7 +48,6 @@ main{
     flex-wrap: wrap;
     margin: var(--spacing-large) 0px;
 }
-
 
 .search{
     position: relative;
@@ -146,10 +140,9 @@ input[type="text"]:focus{
     text-align: center;
 }
 
-/*----de sterst----*/
 img{
-    width: 54px;
-    height: 54px;
+    width: 55px;
+    height: 55px;
 }
 
 .container-icon img{
@@ -181,7 +174,6 @@ img{
     padding-bottom: var(--spacing-medium);
     text-align: center;
 }
-
 
 .details-degree-high, .details-degree-low, .details-wind-speed, .details-humidity-level, .details-sunrise-time, .details-sunset-time{
     margin-top: var(--spacing-medium);
@@ -257,7 +249,6 @@ img{
 
 /*----Responsive display----*/
 
-
 @media only screen and (min-width: 920px){
 
     main{
@@ -290,7 +281,6 @@ img{
     }
 
 }
-
 
 @media only screen and (min-width: 450px){
 
