@@ -12,7 +12,7 @@ Afiseaza informatii utile precum gradele, iconita reprezentativa, si descrierea 
 dar si informatii detaliate, de exemplu: temperatura maxima/minima, viteza vantului,
 umiditatea, cand rasare/apune soarele. 
 
-Se poate cauta orasul dorite(click pe 'lupa' sau enter dupa ce ai introdus un oras in bara
+Se poate cauta orasul dorit(click pe 'lupa' sau enter dupa ce ai introdus un oras in bara
 de cautare).
 
 Se pot salva orasele favorite, dar nu mai mult de trei optiuni.(click pe inconita 'adauga'
