@@ -126,7 +126,7 @@ function getHour(x){
 //----Get weather data from openweather api---------
 function getApi(){
  
-fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=909cb0df41b4da1d8c55cb206b7d0a1f')  
+fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=11336f700480d6a9e8aa99804ade5a71')  
 .then(response => response.json())
 .then(data => {
 
